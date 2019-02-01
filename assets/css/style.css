@@ -5,6 +5,24 @@
 */
 
 /* GLOBAL CSS */
+body {
+    background: black;
+    color: white;
+}
+
+.border {
+    border: solid 1px white;
+}
+
+.red {
+    background-color: red;
+}
+
+.centered {
+    text-align: center;
+}
+
+
 
 
 /* Media 
