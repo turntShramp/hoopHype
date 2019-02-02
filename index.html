@@ -16,35 +16,72 @@
         <link href="assets/fa_css/all.css" rel="stylesheet">
         <!-- CUSTOM CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        
     </head>
 
     <body>
+        <!-- HEADER (FIXED) -->
+        <div class="header center">
+            <img class="image btn" src="assets/img/ncaa.png" alt="hypeLOGO">
+        </div>
 
-        <div class="container centered">
-            <h3>HOOP HYPE</h3>
+        <!-- LANDING PAGE -->
 
-            <div>
-                <p class="border">Instructions: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati voluptatum ad consectetur, sed quae, odit vitae nesciunt soluta incidunt saepe eius ipsa placeat velit doloribus distinctio dignissimos voluptatem amet. Veniam?</p>
-            </div>   
-            
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">Choose Your Team
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Boston Celtics</a></li>
-                  <li><a href="#">Chicago Bulls</a></li>
-                  <li><a href="#">Miami Heat</a></li>
-                </ul>
-              </div>
+        <div class="landingPage">
+            <div class="welcome">
+                <p></p>
             </div>
+        </div>
+
+        <!-- FIRST PAGE -->
+
+        <div class="body">
+            <div class="instructions semi-transparent">
+                <h6>Instructions</h6>
+                <p>Use the dropdown menu to find your team. You can only have one team selected at a time.</p>
+
+
+                <!-- <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">Choose Your Team
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Boston Celtics</a></li>
+                        <li><a href="#">Chicago Bulls</a></li>
+                        <li><a href="#">Miami Heat</a></li>
+                    </ul>
+                    </div>
+                </div> -->
+
+
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose Your Team</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                        <button class="dropdown-item" type="button">Boston Celtics</button>
+                        <button class="dropdown-item" type="button">Chicago Bulls</button>
+                        <button class="dropdown-item" type="button">Miami Heat</button>
+                    </div>
+                </div>    
+
+            </div>
+        </div>
+
+        <!-- SECOND PAGE -->
+
+        <div>
 
         </div>
 
+        <!-- MUSIC (FIXED) -->
+        <div class="centered">
+            <audio class="audio" src="https://youtu.be/J9FImc2LOr8" controls>
+                <p>If you are reading this, it is because your browser does not support the audio element.</p>
+            </audio>
+        </div>
 
 
-        <!-- test -->
-
+        <!-- FOOTER (FIXED) -->
+        <div class="footer">
+            <p class="footerText">Created by Poop Pipe</p>
+        </div>
         <!--------------------------------------------------------------------->
         <!-- LOGIC -->
         <script src="assets/js/jquery-3.3.1.min.js"></script>

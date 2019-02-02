@@ -5,24 +5,65 @@
 */
 
 /* GLOBAL CSS */
-body {
-    background: black;
-    color: white;
+.header {
+    background-color: black;
+}
+body { 
+    background: url("../img/ball.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .image {
+    margin: auto;
+    padding: 10px;
+  }
+
+.instructions {
+    background: transparent;
+    color: rgb(247, 247, 247);
+    margin: 20px;
+    margin-top: 75px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
 }
 
-.border {
-    border: solid 1px white;
+.dropdown {
+    text-align: center;
 }
 
-.red {
-    background-color: red;
+h6 {
+    font-size: 30px;
 }
 
 .centered {
     text-align: center;
 }
 
+.semi-transparent {
+    background:rgba(104, 103, 103, 0.461);
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
 
+.footer {
+    background-color: black;
+    color: grey;
+    text-align: center;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}
 
+.footerText {
+    padding-top: 10px;
+}
 
-/* Media 
+.audio {
+    margin-top: 20px;
+}
+
