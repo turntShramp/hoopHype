@@ -17,9 +17,8 @@ body {
 .header {
     background-color: black;
 }
-.hypeLOGO {
-    margin: 10px auto;
-    padding-left: 30%;
+.nbaLOGO {
+    
 }
 
 .footer {
@@ -32,12 +31,16 @@ body {
     width: 100%;
 }
 
-.footerText {
+.espnImage {
     padding-top: 10px;
 }
 
 h6 {
     font-size: 30px;
+}
+
+p {
+    padding: 0 10px 0 10px;
 }
 
 .centered {
@@ -64,7 +67,7 @@ h6 {
 }
 
 #start {
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 /************************************************************************/

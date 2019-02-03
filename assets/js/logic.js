@@ -15,4 +15,10 @@ $(document).ready(function() {
         $("#gamePage").hide();
     })
 
+    $("#continue").on('click', function() {
+        $("#landingPage").hide();
+        $("#teamPage").hide();
+        $("#gamePage").show();
+    })
+
 });
