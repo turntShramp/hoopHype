@@ -1,3 +1,17 @@
+
+var config = {
+apiKey: "AIzaSyCskbcwlDcnuiEemih4rcvAhct90hy16uI",
+authDomain: "hoophype-a4193.firebaseapp.com",
+databaseURL: "https://hoophype-a4193.firebaseio.com",
+projectId: "hoophype-a4193",
+storageBucket: "",
+messagingSenderId: "366616680438"
+};
+firebase.initializeApp(config);
+
+let teamObjectsArr = [];
+teamObjectsArr.length = 30;
+
 $("#landingPage").show();
 $("#teamPage").hide();
 $("#gamePage").hide();
@@ -21,4 +35,28 @@ $(document).ready(function() {
         $("#gamePage").show();
     })
 
+
+
+    $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://data.nba.net/10s/prod/v1/2018/team_stats_rankings.json') + '&callback=?', {}, function(data){
+        data.contents.league.standard.regularSeason.teams.forEach( function(team) {
+            if(team.apg.avg !== "-") {
+                teamObjectsArr[parseInt(team.apg.rank) - 1] = team.teamId;
+            }
+        });
+
+        $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://data.nba.net/10s/prod/v1/2018/team_stats_rankings.json') + '&callback=?', {}, function(data2){
+            teamObjectsArr.forEach(function(team2) {
+                data2.teams.config.forEach(function(team3) {
+                    if(team2 === team3)
+                        team2 = {
+                           teamId: team3.teamId,
+                           fullName: team3.ttsName,
+                        }
+                });
+            });
+        });
+
+        console.log(teamObjectsArr);
+    });
+    
 });
