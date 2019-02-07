@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hoop Hype</title>
+        <title>Hoop|Hype</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -16,6 +16,10 @@
         <link href="assets/fa_css/all.css" rel="stylesheet">
         <!-- CUSTOM CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!-- FIREBASE -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+        <!-- JQUERY -->
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
     </head>
 
     <body>
@@ -64,14 +68,14 @@
                 </div> -->
 
 
-                <!-- <div class="dropdown">
+                <div class="dropdown">
                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose Your Team</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                         <button class="dropdown-item" type="button">Boston Celtics</button>
                         <button class="dropdown-item" type="button">Chicago Bulls</button>
                         <button class="dropdown-item" type="button">Miami Heat</button>
                     </div>
-                </div>     -->
+                </div>    
 
             </div>
         </div>
@@ -83,7 +87,7 @@
                 <h6>Ranked Games</h6>
                 <p>Below are the remaining games left in the season in ascending order from 'most likely to be a great game' at the top to 'probably okay to miss this one' at the bottom.</p>
                 <div class="centered">
-                    <a href="https://www.stubhub.com/find/s/?q=nba"><button id="purchase" class="btn btn-success">BUY TICKETS</button></a>
+                    <a href=""><button id="purchaseBtn" class="btn btn-success">BUY TICKETS</button></a>
                 </div>
             </div>
         </div>
@@ -94,6 +98,10 @@
                 <p>If you are reading this, it is because your browser does not support the audio element.</p>
             </audio>
         </div> -->
+        <div class="audio">
+            <audio controls="controls" src="https://youtu.be/J9FImc2LOr8" autoplay>
+            </audio>
+        </div>
 
 
         <!-- FOOTER (FIXED) -->
@@ -103,8 +111,7 @@
             </div>
         </div>
         <!--------------------------------------------------------------------->
-        <!-- LOGIC -->
-        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <!-- CUSTOM LOGIC -->
         <script type="text/javascript" src="assets/js/logic.js"></script>
     </body>
 
