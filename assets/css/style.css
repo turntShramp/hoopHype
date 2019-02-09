@@ -2,6 +2,7 @@
 : #1898d4 (Ticketmaster Blue)
 : #0a0a0a (HoopHype Black)
 : #fdf5e6 (Old Lace White)
+: #f16d42 (hoophype Orange)
 */
 
 /* GLOBAL CSS */
@@ -55,6 +56,11 @@ p {
 ul {
     list-style-type: none;
 }
+
+.orange {
+    background-color: #f16d42;
+    color: #fdf5e6;
+}
 /************************************************************************/
 /* LANDING PAGE */
 .welcome {
@@ -89,6 +95,14 @@ ul {
 }
 
 .audio {
+    margin-top: 20px;
+}
+
+.sides {
+    width:300px;  
+}
+
+.top {
     margin-top: 20px;
 }
 
@@ -132,6 +146,7 @@ ul {
 
 .card-text {
     color: #0a0a0a;
+
 }
 
 
