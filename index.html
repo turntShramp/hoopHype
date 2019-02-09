@@ -16,6 +16,8 @@
         <link href="assets/fa_css/all.css" rel="stylesheet">
         <!-- CUSTOM CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     </head>
 
     <body>
@@ -47,6 +49,9 @@
             <div class="instructions semi-transparent">
                 <h6>Instructions</h6>
                 <p>Use the dropdown menu to find and select your team. You can only have one team selected at a time.</p>
+                <select name="teams" id="teamDropdown" class="form-control">
+                    <option class="teamOptions"></option>
+                </select>
 
                 <div class="centered">
                     <button id="continue" class="btn btn-success">CONTINUE</button>
