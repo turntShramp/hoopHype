@@ -31,63 +31,52 @@
         </div>
 
         <!-- LANDING PAGE -->
-
         <div id="landingPage">
             <div class="welcome semi-transparent">
                 <h6>Welcome</h6>
                 <p>Thanks for using hoophype! We want to see you have the best basketball experience possible. This app is designed to let you know what your favorite team's most exciting games of the season will be.</p>
                 <div class="centered">
-                    <button id="start" class="btn btn-success">AWESOME</button>
+                    <button id="start" class="btn orange"><strong>AWESOME</strong></button>
                 </div>
             </div>
         </div>
-
-
-        
-
 
         <!-- TEAM PAGE -->
         <div id="teamPage">
             <div class="instructions semi-transparent">
                 <h6>Instructions</h6>
-              
                 <p> Search and select your team in the dropdown menu below, then let us pick the best possible matchup for an unforgettable experience! Click the hoophhype logo at the top of the screen to reset and choose a new team.</p>
-                <select name="teams" id="teamDropdown" class="form-control">
-                    <option class="teamOptions"></option>
-                </select>
-
-                <div class="centered">
-                    <button id="continue" class="btn btn-success">CONTINUE</button>
+                <div class="centered m-auto">
+                    <select name="teams" id="teamDropdown" class="form-control sides m-auto">
+                        <option class="teamOptions centered" place-holder="choose a team"></option>
+                    </select>
                 </div>
 
-                <!-- DROPDOWN MENU???? -->
-
+                <div class="centered">
+                    <button id="continue" class="btn orange top"><strong>CONTINUE</strong></button>
+                </div>
             </div>
         </div>
 
         <!-- GAME PAGE -->
-
         <div id="gamePage">
             <div class="ranked semi-transparent">
                 <h6>Ranked Games</h6>
-                <p>Below are the remaining games of the season for <span id="chosenTeam">"chosen team"</span>. At the top are the games most likely to be jam packed with elbows, foul line dunks, and three pointers.</p>
+                <p>Below are the remaining games of the season for <span id="chosenTeam">" "</span>. At the top are the games most likely to be jam packed with elbows, foul line dunks, and three pointers.</p>
                 <div id="games" class="test" style="overflow:scroll; height:223px;">
-
-
                     <div class="card game">
                         <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
                             <div class="card-header">
                                 <h6>#1</h6>
                             </div>
-                            <div class="card-body">
-                                <ul>
-                                    <p id="homeTeam">Celtics vs <span id="opponent">Bulls</span></p>
-                                </ul>
+                            <div class="card-body centered">
+                                <p id="who" class="card-text"><strong>Celtics vs Bulls</strong></p>
+                                <p id="where" class="card-text"><strong>Boston</strong></p>
+                                <p id="when" class="card-text"><strong>4/5/6</strong></p>
+                                <p id="cost" class="card-text"><strong>$50</strong></p>
                             </div>
                         </a> <!-- href link -->
                     </div> <!-- .card game -->
-                   
-
                 </div> <!-- #games -->
             </div> <!-- .ranked semi-transparent -->
         </div> <!-- #gamePage -->
@@ -95,7 +84,7 @@
         <!-- FOOTER (FIXED) -->
         <div class="footer">
             <div class="espnImage"></div>
-                <a href="http://www.espn.com/"><img src="assets/img/espn-red_50.png" alt="espn"></a>
+                <a href="http://www.espn.com/"><img src="assets/img/nba-transSMALL.png" alt="espn"></a>
             </div>
         </div>
         <!--------------------------------------------------------------------->
