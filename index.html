@@ -16,6 +16,7 @@
         <link href="assets/fa_css/all.css" rel="stylesheet">
         <!-- CUSTOM CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
         <!-- FIREBASE -->
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
         <!-- JQUERY -->
@@ -44,7 +45,11 @@
         <div id="teamPage">
             <div class="instructions semi-transparent">
                 <h6>Instructions</h6>
+              
                 <p> Search and select your team in the dropdown menu below, then let us pick the best possible matchup for an unforgettable experience! Click the hoophhype logo at the top of the screen to reset and choose a new team.</p>
+                <select name="teams" id="teamDropdown" class="form-control">
+                    <option class="teamOptions"></option>
+                </select>
 
                 <div class="centered">
                     <button id="continue" class="btn btn-success">CONTINUE</button>
