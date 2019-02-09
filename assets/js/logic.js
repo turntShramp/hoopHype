@@ -14,6 +14,8 @@ messagingSenderId: "366616680438"
 };
 firebase.initializeApp(config);
 
+database = firebase.database();
+
 let teamObjectsArr = [];
 teamObjectsArr.length = 30;
 
@@ -22,7 +24,7 @@ $("#teamPage").hide();
 $("#gamePage").hide();
 
 
-// $(document).ready(function() {
+$(document).ready(function() {
 //     $(".hypeLOGO").on('click', function() {
 //         $("#landingPage").hide();
 //         $("#teamPage").show();
@@ -42,7 +44,8 @@ $("#gamePage").hide();
 //     })
 
 
-// });
+
+
 
 
 var config = {
@@ -120,28 +123,18 @@ var config = {
     });
 
 
+    let remainingHomeGames = [];
 
-    $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://data.nba.net/10s/prod/v1/2018/team_stats_rankings.json') + '&callback=?', {}, function(data){
-        data.contents.league.standard.regularSeason.teams.forEach( function(team) {
-            if(team.apg.avg !== "-") {
-                teamObjectsArr[parseInt(team.apg.rank) - 1] = team.teamId;
-            }
+    $.ajax({
+        url: "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=us&keyword=nba&city=boston&apikey=8FNAjp1NFYs6OAEXB0rh6eCJ1jrIzuu2",
+        method: "GET",
+    }).then(function(response) {
+        console.log(response);
+        response._embedded.events.forEach(function(event) {
+            
         });
-
-        $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://data.nba.net/10s/prod/v1/2018/team_stats_rankings.json') + '&callback=?', {}, function(data2){
-            teamObjectsArr.forEach(function(team2) {
-                data2.teams.config.forEach(function(team3) {
-                    if(team2 === team3)
-                        team2 = {
-                           teamId: team3.teamId,
-                           fullName: team3.ttsName,
-                        }
-                });
-            });
-        });
-
-        console.log(teamObjectsArr);
     });
+
     
 });
 
