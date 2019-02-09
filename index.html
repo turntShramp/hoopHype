@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hoop|Hype</title>
+        <title>hoop|hype</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -20,17 +20,13 @@
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
         <!-- JQUERY -->
         <script src="assets/js/jquery-3.3.1.min.js"></script>
+
     </head>
 
     <body>
         <!-- HEADER (FIXED) -->
-        <!-- <div class="header center">
-            <div class="wrapper">
-                <img class="nbaLOGO btn" src="assets/img/nba-transSMALL.png" alt="hypeLOGO">
-            </div>
-        </div> -->
-        <div class="centered">
-            <img class="nbaLOGO btn" src="assets/img/nba-transSMALL.png" alt="hypeLOGO">
+        <div class="header centered">
+                <img class="hypeLOGO btn" src="assets/img/hhSmall.png" alt="hypeLOGO">
         </div>
 
         <!-- LANDING PAGE -->
@@ -38,7 +34,7 @@
         <div id="landingPage">
             <div class="welcome semi-transparent">
                 <h6>Welcome</h6>
-                <p>Thanks for using Hoop Hype! This app is designed to let you know what the NBA's most exciting games of the season will be based on the player statistics of your chosen team. In the event you find a game you want to see we'll provide a link the best currently avialable seats for that game.</p>
+                <p>Thanks for using Hoop Hype! This app is designed to let you know what your favorite NBA team's most exciting games of the season will be. In the event you find a game you want to see we'll provide a link to the best currently avialable seats. </p>
                 <div class="centered">
                     <button id="start" class="btn btn-success">WICKED</button>
                 </div>
@@ -50,32 +46,13 @@
         <div id="teamPage">
             <div class="instructions semi-transparent">
                 <h6>Instructions</h6>
-                <p>Use the dropdown menu to find and select your team. You can only have one team selected at a time.</p>
+                <p>Use the dropdown menu to find and select your team. You can only have one team selected at a time. CLick the hoophhype logo at the top of the screen to reset and choose a new team.</p>
 
                 <div class="centered">
                     <button id="continue" class="btn btn-success">CONTINUE</button>
                 </div>
 
-                <!-- <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">Choose Your Team
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Boston Celtics</a></li>
-                        <li><a href="#">Chicago Bulls</a></li>
-                        <li><a href="#">Miami Heat</a></li>
-                    </ul>
-                    </div>
-                </div> -->
-
-
-                <div class="dropdown">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose Your Team</button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <button class="dropdown-item" type="button">Boston Celtics</button>
-                        <button class="dropdown-item" type="button">Chicago Bulls</button>
-                        <button class="dropdown-item" type="button">Miami Heat</button>
-                    </div>
-                </div>    
+                <!-- DROPDOWN MENU???? -->
 
             </div>
         </div>
@@ -83,26 +60,69 @@
         <!-- GAME PAGE -->
 
         <div id="gamePage">
-            <div class="instructions semi-transparent">
+            <div class="ranked semi-transparent">
                 <h6>Ranked Games</h6>
-                <p>Below are the remaining games left in the season in ascending order from 'most likely to be a great game' at the top to 'probably okay to miss this one' at the bottom.</p>
-                <div class="centered">
-                    <a href=""><button id="purchaseBtn" class="btn btn-success">BUY TICKETS</button></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- MUSIC (FIXED) -->
-        <!-- <div class="centered">
-            <audio class="audio" src="https://youtu.be/J9FImc2LOr8" controls>
-                <p>If you are reading this, it is because your browser does not support the audio element.</p>
-            </audio>
-        </div> -->
-        <div class="audio">
-            <audio controls="controls" src="https://youtu.be/J9FImc2LOr8" autoplay>
-            </audio>
-        </div>
-
+                <p>Below are the remaining games of the season. At the top are the games most likely to be jam packed with elbows, foul line dunks, and three pointers.</p>
+                <div id="games" class="test" style="overflow:scroll; height:223px;">
+                    <div class="card game">
+                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
+                            <div class="card-header">
+                                <h6>#1</h6>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li id="who">Celtics vs. Bulls</li>
+                                    <li id="where">AT HOME! Boston, MA</li>
+                                    <li id="when">4/5/6</li>
+                                </ul>
+                            </div>
+                        </a> <!-- href link -->
+                    </div> <!-- .card game -->
+                    <div class="card game">
+                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
+                            <div class="card-header">
+                                <h6>#1</h6>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li id="who">Celtics vs. Bulls</li>
+                                    <li id="where">AT HOME! Boston, MA</li>
+                                    <li id="when">4/5/6</li>
+                                </ul>
+                            </div>
+                        </a> <!-- href link -->
+                    </div> <!-- .card game -->
+                    <div class="card game">
+                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
+                            <div class="card-header">
+                                <h6>#1</h6>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li id="who">Celtics vs. Bulls</li>
+                                    <li id="where">AT HOME! Boston, MA</li>
+                                    <li id="when">4/5/6</li>
+                                </ul>
+                            </div>
+                        </a> <!-- href link -->
+                    </div> <!-- .card game -->
+                    <div class="card game">
+                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
+                            <div class="card-header">
+                                <h6>#1</h6>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li id="who">Celtics vs. Bulls</li>
+                                    <li id="where">AT HOME! Boston, MA</li>
+                                    <li id="when">4/5/6</li>
+                                </ul>
+                            </div>
+                        </a> <!-- href link -->
+                    </div> <!-- .card game -->
+                </div> <!-- #games -->
+            </div> <!-- .ranked semi-transparent -->
+        </div> <!-- #gamePage -->
 
         <!-- FOOTER (FIXED) -->
         <div class="footer">
