@@ -1,32 +1,3 @@
-
-// $("#landingPage").show();
-// $("#teamPage").hide();
-// $("#gamePage").hide();
-
-//$(document).ready(function() {
-//     $(".hypeLOGO").on('click', function() {
-//         $("#landingPage").hide();
-//         $("#teamPage").show();
-//         $("#gamePage").hide();
-//     })
-
-//     $("#start").on('click', function() {
-//         $("#landingPage").hide();
-//         $("#teamPage").show();
-//         $("#gamePage").hide();
-//     })
-
-//     $("#continue").on('click', function() {
-//         $("#landingPage").hide();
-//         $("#teamPage").hide();
-//         $("#gamePage").show();
-//     })
-
-
-
-
-
-
 var config = {
     apiKey: "AIzaSyCskbcwlDcnuiEemih4rcvAhct90hy16uI",
     authDomain: "hoophype-a4193.firebaseapp.com",
@@ -71,9 +42,6 @@ $(document).ready(function() {
             $("#teamPage").hide();
             $("#gamePage").show();
         });
-    
-        
-        $(".dropdown-toggle").dropdown();
 
 
     let remainingHomeGames = [];
