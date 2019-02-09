@@ -2,6 +2,7 @@
 : #1898d4 (Ticketmaster Blue)
 : #0a0a0a (HoopHype Black)
 : #fdf5e6 (Old Lace White)
+: #f16d42 (hoophype Orange)
 */
 
 /* GLOBAL CSS */
@@ -52,6 +53,14 @@ p {
     padding-bottom: 30px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+.orange {
+    background-color: #f16d42;
+    color: #fdf5e6;
+}
 /************************************************************************/
 /* LANDING PAGE */
 .welcome {
@@ -89,6 +98,14 @@ p {
     margin-top: 20px;
 }
 
+.sides {
+    width:300px;  
+}
+
+.top {
+    margin-top: 20px;
+}
+
 /************************************************************************/
 /* GAME PAGE */
 .ranked {
@@ -107,18 +124,32 @@ p {
 
 .card {
     margin: 5px 40px 5px 40px;
-    background-color: #0a0a0a;
+    background: transparent;
+    padding: 0;
+    border: none;
+    
 }
 
 .card-header {
-    background-color: tan;
-    border: 1px solid red;
+    background-color: #0a0a0a;
+    border: 1px solid #0a0a0a;
+    margin: 0;
+    padding-bottom: 0;
 }
 
 .card-body {
-    background-color: tan;
-    border: 1px solid green;
+    background: #fdf5e6;
+    color: #0a0a0a;
+    border: 3px solid #0a0a0a;
+    margin: 0;
 }
+
+.card-text {
+    color: #0a0a0a;
+
+}
+
+
 
 
 

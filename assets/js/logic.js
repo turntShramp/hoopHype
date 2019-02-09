@@ -17,14 +17,14 @@ var config = {
         teamsArr = teamArray.val();
     });
     // Landing Page 
-        // temporary for build
-        $("#gamePage").show();
-        $("#landingPage").hide();
-        $("#teamPage").hide();
-        // 
-    // $("#landingPage").show();
-    // $("#teamPage").hide();
-    // $("#gamePage").hide();
+        // // temporary for build
+        // $("#gamePage").show();
+        // $("#landingPage").hide();
+        // $("#teamPage").hide();
+        // // 
+    $("#landingPage").show();
+    $("#teamPage").hide();
+    $("#gamePage").hide();
     
 $(document).ready(function() {
         // hoopHype Logo Link
@@ -56,6 +56,7 @@ $(document).ready(function() {
     let finalRecommended = [];
     
     
+
 
     $.ajax({
         url: "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=us&keyword=nba&city=boston&apikey=8FNAjp1NFYs6OAEXB0rh6eCJ1jrIzuu2",
@@ -110,4 +111,3 @@ $(document).ready(function() {
         });
     }
 });
-
