@@ -1,7 +1,7 @@
 /* Color/Font/Global References
-: # 
-: # 
-: #
+: #1898d4 (Ticketmaster Blue)
+: #0a0a0a (HoopHype Black)
+: #fdf5e6 (Old Lace White)
 */
 
 /* GLOBAL CSS */
@@ -15,14 +15,11 @@ body {
 
 
 .header {
-    background-color: black;
-}
-.nbaLOGO {
-    
+    background-color: #0a0a0a;
 }
 
 .footer {
-    background-color: black;
+    background-color: #0a0a0a;
     color: grey;
     text-align: center;
     position: fixed;
@@ -37,10 +34,12 @@ body {
 
 h6 {
     font-size: 30px;
+    color: #fdf5e6;
 }
 
 p {
     padding: 0 10px 0 10px;
+    color: #fdf5e6;
 }
 
 .centered {
@@ -76,7 +75,7 @@ p {
     background: transparent;
     color: rgb(247, 247, 247);
     margin: 20px;
-    margin-top: 75px;
+    margin-top: 50px;
     text-align: center;
     font-size: 20px;
     border-radius: 25px;
@@ -92,6 +91,34 @@ p {
 
 /************************************************************************/
 /* GAME PAGE */
+.ranked {
+    background: transparent;
+    color: rgb(247, 247, 247);
+    margin: 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.test {
+   /* background-color: red; */
+}
+
+.card {
+    margin: 5px 40px 5px 40px;
+    background-color: #0a0a0a;
+}
+
+.card-header {
+    background-color: tan;
+    border: 1px solid red;
+}
+
+.card-body {
+    background-color: tan;
+    border: 1px solid green;
+}
 
 
 
