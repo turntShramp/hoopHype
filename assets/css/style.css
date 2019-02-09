@@ -52,6 +52,9 @@ p {
     padding-bottom: 30px;
 }
 
+ul {
+    list-style-type: none;
+}
 /************************************************************************/
 /* LANDING PAGE */
 .welcome {
@@ -107,18 +110,27 @@ p {
 
 .card {
     margin: 5px 40px 5px 40px;
-    background-color: #0a0a0a;
+    background: transparent;
+    padding: 0;
+    border: none;
+    
 }
 
 .card-header {
-    background-color: tan;
-    border: 1px solid red;
+    background-color: #0a0a0a;
+    border: 1px solid #0a0a0a;
+    margin: 0;
+    padding-bottom: 0;
 }
 
 .card-body {
-    background-color: tan;
-    border: 1px solid green;
+    background: #fdf5e6;
+    color: #0a0a0a;
+    border: 3px solid #0a0a0a;
+    margin: 0;
 }
+
+
 
 
 
