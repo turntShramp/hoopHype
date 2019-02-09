@@ -39,6 +39,7 @@ $(document).ready(function() {
             $("#landingPage").hide();
             $("#teamPage").show();
             $("#gamePage").hide();
+            addTeamOptions();
         })
     
         // Game Page
@@ -47,10 +48,12 @@ $(document).ready(function() {
             $("#teamPage").hide();
             $("#gamePage").show();
             populateGameRecs();
+            updateChosenTeam();
         });
 
 
     let remainingHomeGames = [];
+    let finalRecommended = [];
     
     
 
@@ -65,12 +68,25 @@ $(document).ready(function() {
                 date: event.dates.start.localDate,
                 url: event.url,
             });
+            sortRemainingSchedule();
         });
         console.log(remainingHomeGames);
     });
 
     function updateChosenTeam() {
+        let userTeam = $("#teamDropdown").val();
         $("#chosenTeam").text(userTeam);
+    }
+
+    function sortRemainingSchedule() {
+        database.ref("/gamesByExcitement").once("value", function(excitementArray) {
+            excitementArray.val().forEach(function(excitingTeam) {
+                remainingHomeGames.forEach(function(game) {
+                    if(excitingTeam.fullName.includes(game.city))
+                        finalRecommended.push(game);
+                })
+            })
+        })
     }
 
     function addTeamOptions() {
@@ -83,7 +99,7 @@ $(document).ready(function() {
     }
 
     function populateGameRecs() {
-        remainingHomeGames.forEach(function(homeGame) {
+        finalRecommended.forEach(function(homeGame) {
             let newCard = $("#empty-card").clone();
             newCard.find("#who").text(homeGame.visitor);
             newCard.find("#where").text(userTeam);
