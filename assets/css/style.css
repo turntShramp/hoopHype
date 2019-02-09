@@ -67,7 +67,7 @@ ul {
     background: transparent;
     color: rgb(247, 247, 247);
     margin: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     font-size: 20px;
     border-radius: 25px;
@@ -84,7 +84,7 @@ ul {
     background: transparent;
     color: rgb(247, 247, 247);
     margin: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     font-size: 20px;
     border-radius: 25px;
@@ -112,7 +112,7 @@ ul {
     background: transparent;
     color: rgb(247, 247, 247);
     margin: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     font-size: 20px;
     border-radius: 25px;
@@ -127,7 +127,6 @@ ul {
     background: transparent;
     padding: 0;
     border: none;
-    
 }
 
 .card-header {
@@ -146,7 +145,6 @@ ul {
 
 .card-text {
     color: #0a0a0a;
-
 }
 
 
