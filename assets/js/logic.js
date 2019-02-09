@@ -45,6 +45,8 @@ $(document).ready(function() {
 
 
     let remainingHomeGames = [];
+    
+    
 
     $.ajax({
         url: "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=us&keyword=nba&city=boston&apikey=8FNAjp1NFYs6OAEXB0rh6eCJ1jrIzuu2",
@@ -52,8 +54,12 @@ $(document).ready(function() {
     }).then(function(response) {
         console.log(response);
         response._embedded.events.forEach(function(event) {
-            
+            remainingHomeGames.push({
+                visitor: event.name.slice(event.name.indexOf("vs. ") + 4),
+            });
         });
+        console.log(remainingHomeGames);
+        
     });
 
     
