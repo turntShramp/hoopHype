@@ -49,7 +49,7 @@
                 <h6>Instructions</h6>
                 <p>Use the dropdown menu to find and select your team. You can only have one team selected at a time. CLick the hoophhype logo at the top of the screen to reset and choose a new team.</p>
                 <select name="teams" id="teamDropdown" class="form-control">
-                    <option class="teamOptions"></option>
+                    <option id="teamOption" hidden="true"></option>
                 </select>
 
                 <div class="centered">
@@ -68,58 +68,16 @@
                 <h6>Ranked Games</h6>
                 <p>Below are the remaining games of the season. At the top are the games most likely to be jam packed with elbows, foul line dunks, and three pointers.</p>
                 <div id="games" class="test" style="overflow:scroll; height:223px;">
-                    <div class="card game">
-                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
+                    <div class="card game w-100" hidden="true" id="empty-card">
+                        <a href="" class="btn btn-fix" id="tmURL">
                             <div class="card-header">
-                                <h6>#1</h6>
+                                <h6></h6>
                             </div>
                             <div class="card-body">
                                 <ul>
-                                    <li id="who">Celtics vs. Bulls</li>
-                                    <li id="where">AT HOME! Boston, MA</li>
-                                    <li id="when">4/5/6</li>
-                                </ul>
-                            </div>
-                        </a> <!-- href link -->
-                    </div> <!-- .card game -->
-                    <div class="card game">
-                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
-                            <div class="card-header">
-                                <h6>#1</h6>
-                            </div>
-                            <div class="card-body">
-                                <ul>
-                                    <li id="who">Celtics vs. Bulls</li>
-                                    <li id="where">AT HOME! Boston, MA</li>
-                                    <li id="when">4/5/6</li>
-                                </ul>
-                            </div>
-                        </a> <!-- href link -->
-                    </div> <!-- .card game -->
-                    <div class="card game">
-                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
-                            <div class="card-header">
-                                <h6>#1</h6>
-                            </div>
-                            <div class="card-body">
-                                <ul>
-                                    <li id="who">Celtics vs. Bulls</li>
-                                    <li id="where">AT HOME! Boston, MA</li>
-                                    <li id="when">4/5/6</li>
-                                </ul>
-                            </div>
-                        </a> <!-- href link -->
-                    </div> <!-- .card game -->
-                    <div class="card game">
-                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
-                            <div class="card-header">
-                                <h6>#1</h6>
-                            </div>
-                            <div class="card-body">
-                                <ul>
-                                    <li id="who">Celtics vs. Bulls</li>
-                                    <li id="where">AT HOME! Boston, MA</li>
-                                    <li id="when">4/5/6</li>
+                                    <li id="who"></li>
+                                    <li id="where"></li>
+                                    <li id="when"></li>
                                 </ul>
                             </div>
                         </a> <!-- href link -->

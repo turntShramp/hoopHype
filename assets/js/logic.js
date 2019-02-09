@@ -6,11 +6,16 @@ var config = {
     storageBucket: "",
     messagingSenderId: "366616680438"
     };
+
     firebase.initializeApp(config);
+    let database = firebase.database();
     
-    let teamObjectsArr = [];
-    teamObjectsArr.length = 30;
-    
+    let userTeam = "Boston";
+    let teamsArr = [];
+
+    database.ref("/teams").once("value", function(teamArray) {
+        teamsArr = teamArray.val();
+    });
     // Landing Page 
         // temporary for build
         $("#gamePage").show();
@@ -41,6 +46,7 @@ $(document).ready(function() {
             $("#landingPage").hide();
             $("#teamPage").hide();
             $("#gamePage").show();
+            populateGameRecs();
         });
 
 
@@ -56,12 +62,36 @@ $(document).ready(function() {
         response._embedded.events.forEach(function(event) {
             remainingHomeGames.push({
                 visitor: event.name.slice(event.name.indexOf("vs. ") + 4),
+                date: event.dates.start.localDate,
+                url: event.url,
             });
         });
         console.log(remainingHomeGames);
-        
     });
 
-    
+    function updateChosenTeam() {
+        $("#chosenTeam").text(userTeam);
+    }
+
+    function addTeamOptions() {
+        teamsArr.forEach(function(team){
+        let newOption = $("#teamOption").clone();
+        newOption.text = team.city + team.nickname;
+        newOption.removeAttr("hidden");
+        $("#teamDropdown").append(newOption);
+        });
+    }
+
+    function populateGameRecs() {
+        remainingHomeGames.forEach(function(homeGame) {
+            let newCard = $("#empty-card").clone();
+            newCard.find("#who").text(homeGame.visitor);
+            newCard.find("#where").text(userTeam);
+            newCard.find("#when").text(homeGame.date);
+            newCard.find("#tmURL").attr("href", homeGame.url);
+            newCard.removeAttr("hidden");
+            $("#games").append(newCard);
+        });
+    }
 });
 
