@@ -30,6 +30,9 @@ $(document).ready(function() {
             $("#landingPage").hide();
             $("#teamPage").show();
             $("#gamePage").hide();
+            $(".new-cards").remove();
+            remainingHomeGames = [];
+            finalRecommended = [];
         });
     
         // Team Page
@@ -67,14 +70,25 @@ $(document).ready(function() {
                 console.log(event._embedded.attractions[0].name);
                 console.log();
                 if(event._embedded.attractions[0].name.includes(teamNickname)) {
-                    remainingHomeGames.push({
-                        visitor: event._embedded.attractions[1].name,
-                        date: moment(event.dates.start.localDate, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY"),
-                        url: event.url,
-                        venue: event._embedded.venues[0].name + " - " + event._embedded.venues[0].city.name + ", " + event._embedded.venues[0].state.name,
-                        priceMax: "$" + event.priceRanges[0].max,
-                        priceMin: "$" + event.priceRanges[0].min,
-                    });
+                    console.log(event.priceRanges);
+                    if(event.priceRanges) {
+                        remainingHomeGames.push({
+                            visitor: event._embedded.attractions[1].name,
+                            date: moment(event.dates.start.localDate, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY"),
+                            url: event.url,
+                            venue: event._embedded.venues[0].name + " - " + event._embedded.venues[0].city.name + ", " + event._embedded.venues[0].state.name,
+                            priceMax: "$" + event.priceRanges[0].max,
+                            priceMin: "$" + event.priceRanges[0].min,
+                        });
+                    }
+                    else {
+                        remainingHomeGames.push({
+                            visitor: event._embedded.attractions[1].name,
+                            date: moment(event.dates.start.localDate, "YYYY-MM-DD").format("dddd, MMMM Do, YYYY"),
+                            url: event.url,
+                            venue: event._embedded.venues[0].name + " - " + event._embedded.venues[0].city.name + ", " + event._embedded.venues[0].state.name,
+                        });
+                    }
                 }
             });
             console.log(remainingHomeGames);
@@ -120,11 +134,15 @@ $(document).ready(function() {
         console.log(finalRecommended.length);
         finalRecommended.forEach(function(homeGame){
             let newCard = $("#empty-card").clone();
+            newCard.addClass("new-cards");
             newCard.find("#game-rank").text(counter++);
             newCard.find("#who").text(homeGame.visitor);
             newCard.find("#where").text(homeGame.venue);
             newCard.find("#when").text(homeGame.date);
-            newCard.find("#cost").text("Ticket cost: " + homeGame.priceMin + " - " + homeGame.priceMax);
+            if(homeGame.priceMin) 
+                newCard.find("#cost").text("Ticket cost: " + homeGame.priceMin + " - " + homeGame.priceMax);
+            else
+                newCard.find("#cost").text("Ticket price range not listed");
             newCard.attr("href", homeGame.url);
             newCard.removeAttr("hidden");
             $("#games").append(newCard);
