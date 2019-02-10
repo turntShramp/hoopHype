@@ -20,6 +20,8 @@
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
         <!-- JQUERY -->
         <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <!-- MOMENT.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     </head>
 
     <body>
@@ -60,20 +62,18 @@
             <div class="ranked semi-transparent">
                 <h6>Ranked Games</h6>
                 <p>Below are the remaining games of the season for the <span id="chosenTeam">" "</span>. At the top are the games most likely to be jam packed with excessive elbows, foul line dunks, and three pointers. Click on the game you want to attend to see the best seats currently available.</p>
-                <div id="games" style="overflow:scroll; height:130px;">
-                    <div class="card game" id="empty-card" hidden="true">
-                        <a href="https://www.ticketmaster.com/nba/?landing=c&awtrc=true&c=SEM_TMNBA_ggl_1679245415_64940782746_ticketmaster%20nba&GCID=0&&gclid=CjwKCAiA7vTiBRAqEiwA4NTO644AQeOnHo3sCoy0eQhC-9sHJVWDuO8nlS2o4QNPyjpLLi9G-_Vo2RoCoXEQAvD_BwE&gclsrc=aw.ds" class="btn btn-fix ">
-                            <div class="card-header">
-                                <h6 id="game-rank"></h6>
-                            </div>
-                            <div class="card-body centered">
-                                <p id="who" class="card-text"><strong></strong></p>
-                                <p id="where" class="card-text"><strong></strong></p>
-                                <p id="when" class="card-text"><strong></strong></p>
-                                <p id="cost" class="card-text"><strong></strong></p>
-                            </div>
-                        </a> <!-- href link -->
-                    </div> <!-- .card game -->
+                <div id="games">
+                    <a href="" target="_blank" class="card game" id="empty-card" hidden="true">
+                        <div class="card-header">
+                            <h6 id="game-rank"></h6>
+                        </div>
+                        <div class="card-body centered">
+                            <p><strong id="who" class="card-text"></strong></p>
+                            <p id="where" class="card-text"></p>
+                            <p id="when" class="card-text"></p>
+                            <p id="cost" class="card-text"></p>
+                        </div> <!-- .card game -->
+                    </a> <!-- href link -->
                 </div> <!-- #games -->
             </div> <!-- .ranked semi-transparent -->
         </div> <!-- #gamePage -->
